@@ -20,8 +20,8 @@ class CreateTableCommentTable extends Migration
             $table->foreign('id_mv')->references('id_mv')->on('movie')->onDelete('cascade')->onUpdate('cascade');
             $table->bigInteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->bigInteger('id_comment')->unsigned();
-            $table->foreign('id_comment')->references('id_comment')->on('comment')->onDelete('cascade')->onUpdate('cascade');
+            $table->bigInteger('id_comment_rep')->unsigned();
+            $table->foreign('id_comment_rep')->references('id_comment')->on('comment')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

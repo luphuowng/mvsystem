@@ -20,7 +20,7 @@ class CreateTablePaymentTable extends Migration
             $table->bigInteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->bigInteger('id_ticketmv')->unsigned();
-            $table->foreign('id_ticketmv')->references('id_ticketmv')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_ticketmv')->references('id_ticketmv')->on('ticket_mv')->onDelete('cascade')->onUpdate('cascade');
             $table->bigInteger('id_methodpay')->unsigned();
             $table->foreign('id_methodpay')->references('id_methodpay')->on('method_payment')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

@@ -14,7 +14,7 @@ class CreateTableLanguageTable extends Migration
     public function up()
     {
         Schema::create('language', function (Blueprint $table) {
-            $table->bigIncrements('id_languege');
+            $table->bigIncrements('id_language');
             $table->string('language_name');
             $table->timestamps();
         });
