@@ -50,15 +50,15 @@
                     </a>
                 </li>
 
-                <li class="nav-header">Quản lý cửa hàng</li>
+                <li class="nav-header">Quản lý rạp</li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link
-                    @if (Request::segment(2) == 'san-pham')
+                    <a href="{{ route('movie-type.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'loai-phim')
                         active
                     @endif
                     ">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>Sản phẩm</p>
+                        <p>Loại phim</p>
                     </a>
                 </li>
                 <li class="nav-header">Dữ liệu chính</li>

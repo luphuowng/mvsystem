@@ -49,6 +49,18 @@
         <!-- /.content-wrapper -->
         @include('admin.template.footer')
         @include('admin.template.js')
+        <script>
+            $(document).ready(function() {
+                $(".del").click(function() {
+                    if (confirm('Are you sure to delete')) {
+                        console.log("true");
+                        return true;
+                    }
+                    console.log("false");
+                    return false
+                });
+            });
+        </script>
     </div>
 </body>
 
