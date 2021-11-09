@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableTypeMemberTable extends Migration
+class CreateTableDiscountForMemTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateTableTypeMemberTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_member', function (Blueprint $table) {
-            $table->bigIncrements('id_typemem');
-            $table->string('typemem_name');
+        Schema::create('discount_for_mem', function (Blueprint $table) {
             $table->bigInteger('id_discount')->unsigned();
             $table->foreign('id_discount')->references('id_discount')->on('discount')->onDelete('cascade')->onUpdate('cascade');
-            $table->bigInteger('id_benefit')->unsigned();
-            $table->foreign('id_benefit')->references('id_benefit')->on('benefit')->onDelete('cascade')->onUpdate('cascade');
+            $table->bigInteger('id_typemem')->unsigned();
+            $table->foreign('id_typemem')->references('id_typemem')->on('type_member')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateTableTypeMemberTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_member');
+        Schema::dropIfExists('discount_for_mem');
     }
 }

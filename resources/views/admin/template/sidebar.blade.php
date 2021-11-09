@@ -38,7 +38,7 @@
                     </a>
                 </li>
 
-                <li class="nav-header">Quản lý quy trình</li>
+                <li class="nav-header">QUẢN LÝ VÉ ĐẶT</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link
                     @if (Request::segment(2) == 'phieu-hen')
@@ -49,8 +49,38 @@
                         <p>Phiếu hẹn</p>
                     </a>
                 </li>
-
-                <li class="nav-header">Quản lý rạp</li>
+                <li class="nav-header">QUẢN LÝ TÀI KHOẢN</li>
+                <li class="nav-item">
+                    <a href="{{ route('type-acc.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'loai-tai-khoan')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Loại tài khoản</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('type-member.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'loai-thanh-vien')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Loại thành viên</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('account.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'tai-khoan')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Tài khoản</p>
+                    </a>
+                </li>
+                <li class="nav-header">QUẢN LÝ PHIM</li>
                 <li class="nav-item">
                     <a href="{{ route('movie-type.index') }}" class="nav-link
                     @if (Request::segment(2) == 'loai-phim')
@@ -61,7 +91,77 @@
                         <p>Loại phim</p>
                     </a>
                 </li>
-                <li class="nav-header">Dữ liệu chính</li>
+                <li class="nav-item">
+                    <a href="{{ route('movie.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'phim')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Phim</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('format.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'format')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Định dạng phim</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('language.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'language')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Ngôn ngữ phim</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('movie-banner.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'movie-banner')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Banner của phim</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('article.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'article')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Tin tức về rạp</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('discount.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'discount')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Giảm giá thành viên</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('voucher.index') }}" class="nav-link
+                    @if (Request::segment(2) == 'voucher')
+                        active
+                    @endif
+                    ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Voucher</p>
+                    </a>
+                </li>
+                <li class="nav-header">QUẢN LÝ RẠP</li>
 
             </ul>
         </nav>

@@ -15,17 +15,16 @@ class CreateTableMovieTable extends Migration
     {
         Schema::create('movie', function (Blueprint $table) {
             $table->bigIncrements('id_mv');
-            $table->string('mv_name')->unique();
+            $table->string('mv_name');
             $table->string('director');
-            $table->string('perfomer');
+            $table->text('perfomer');
             $table->integer('timemv')->nullable();
             $table->string('mv_content')->nullable();
             $table->string('image')->nullable();
             $table->string('trailer')->nullable();
             $table->string('made_in')->nullable();
-            $table->boolean('sup')->nullable();
-            $table->boolean('dup');
-            $table->date('date_start')->nullable();
+            $table->boolean('subdub')->nullable();
+            $table->date('date_start');
             $table->date('date_end');
             $table->bigInteger('id_typemv')->unsigned();
             $table->foreign('id_typemv')->references('id_typemv')->on('type_movie')->onDelete('cascade')->onUpdate('cascade');
@@ -35,7 +34,6 @@ class CreateTableMovieTable extends Migration
             $table->foreign('id_format')->references('id_format')->on('format')->onDelete('cascade')->onUpdate('cascade');
             $table->bigInteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            // $table->rememberToken();
             $table->timestamps();
         });
     }

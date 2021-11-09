@@ -78,7 +78,7 @@ class MovieTypeController extends Controller
             return view('admin.movie-type.edit', compact('typeDetail'));
         } catch (\Throwable $th) {
             //throw $th;
-            Session::flash('error','Ko vào được trang chi tiết');
+            Session::flash('error','Không vào được trang chi tiết');
             return redirect()->back();
         }
     }

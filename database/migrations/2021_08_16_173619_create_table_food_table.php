@@ -17,6 +17,7 @@ class CreateTableFoodTable extends Migration
             $table->bigIncrements('id_food');
             $table->string('food_name');
             $table->float('food_price');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

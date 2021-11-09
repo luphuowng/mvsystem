@@ -16,8 +16,6 @@ class CreateTableMembershipCardTable extends Migration
         Schema::create('membership_card', function (Blueprint $table) {
             $table->bigIncrements('id_memcard');
             $table->string('memcard_name');
-            $table->bigInteger('id_typemem')->unsigned();
-            $table->foreign('id_typemem')->references('id_typemem')->on('type_member')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
